@@ -1,5 +1,8 @@
-const palabra = document.getElementById("imputBuscar")
 info = ""
+
+function toNormalForm(str) {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
 
 document.addEventListener("DOMContentLoaded", function (e) {
   fetch("https://japceibal.github.io/japflix_api/movies-data.json")
@@ -10,9 +13,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     .catch(error => console.log(error))
 });
 
-function buscador(){
-palabra
- console.log("hola")
- console.log(palabra)
-}
-
+document.getElementById("btnBuscar").addEventListener("click", () => {
+  let searchInfo = toNormalForm(document.getElementById("inputBuscar").value).toLowerCase();
+  console.log(searchInfo);
+})
