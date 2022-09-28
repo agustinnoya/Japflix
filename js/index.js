@@ -1,4 +1,4 @@
-
+const palabra =  document.getElementById("imputBuscar")
 info = ""
 
 document.addEventListener("DOMContentLoaded", function (e) {
@@ -9,3 +9,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
     .then(info => { console.log("fetch", info); return info })
     .catch(error => console.log(error))
 });
+
+button.addEventListener("click", (btnBuscar) => { 
+ palabra.value
+})
+
