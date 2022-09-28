@@ -1,4 +1,4 @@
-const palabra =  document.getElementById("imputBuscar")
+const palabra = document.getElementById("imputBuscar")
 info = ""
 
 document.addEventListener("DOMContentLoaded", function (e) {
