@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
     .catch(error => console.log(error))
 });
 
-button.addEventListener("click", (btnBuscar) => { 
- palabra.value
-})
+function buscador(){
+palabra
+ console.log("hola")
+ console.log(palabra)
+}
 
