@@ -12,7 +12,10 @@
 
 .card-content{
     height: 150px;
+    margin-left: 20%;
+    margin-right: 20%;
     overflow: auto;
+    
 }
 
 main {
@@ -26,3 +29,21 @@ main {
 .offcanvas-top{
     height: fit-content;
 }
+
+#descripcion{
+ color: rgb(117, 117, 117);
+}
+
+.titulo{
+ color: rgb(255, 255, 255);
+
+ 
+}
+
+.contenido{
+    display: flex;
+justify-content: space-between;
+
+text-align: center;
+}
+
