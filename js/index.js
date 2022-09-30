@@ -112,7 +112,21 @@ function headerInfo(i){
     <p>${movie.overview}</p>
     <hr>
     <p>${movieGenre(movie.genres)}</p>
-  </div>    
+
+      <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link" > <span> </span > 
+          </a>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+          <li><a class="dropdown-item" >Year: ${release_date}</a></li>
+          <li><a class="dropdown-item" >Runtime: ${runtime} </a></li>
+          <li><a  class="dropdown-item" >Budget: ${budget}</a></li>
+          <li><a  class="dropdown-item" >Revenue: ${revenue}</a></li>
+        </ul>
+      </div>
+  </div>   
+
   `
   document.getElementById("offcanvasTop").innerHTML = contentToAppend;
 }
