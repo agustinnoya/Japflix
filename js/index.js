@@ -108,25 +108,27 @@ function headerInfo(i){
     <h5 class="offcanvas-title" id="offcanvasTopLabel">${movie.title}</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body">
-    <p>${movie.overview}</p>
+
+  <div class="canvasBody">
+    <p class="">${movie.overview}</p>
     <hr>
-    <p>${movieGenre(movie.genres)}</p>
+    
+    <div class="canvasContent">
+    <div>
+      ${movieGenre(movie.genres)}      
+    </div>
 
-      <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link" > <span> </span > 
-          </a>
-        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-          <li><a class="dropdown-item" >Year: ${release_date}</a></li>
-          <li><a class="dropdown-item" >Runtime: ${runtime} </a></li>
-          <li><a  class="dropdown-item" >Budget: ${budget}</a></li>
-          <li><a  class="dropdown-item" >Revenue: ${revenue}</a></li>
-        </ul>
-      </div>
-  </div>   
-
+    <div class="dropdown">
+      <button class="botonMore btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item">Year: ${(movie.release_date).substring(0, 4)}</a></li>
+        <li><a class="dropdown-item">Runtime: ${movie.runtime} </a></li>
+        <li><a class="dropdown-item">Budget: $${movie.budget}</a></li>
+        <li><a class="dropdown-item">Revenue: $${movie.revenue}</a></li>
+      </ul>
+    </div>  
+    </div>
+  </div>  
   `
   document.getElementById("offcanvasTop").innerHTML = contentToAppend;
 }
