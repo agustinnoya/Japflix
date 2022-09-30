@@ -49,3 +49,8 @@ main {
 .cursor-active {
     cursor: pointer;
 }
+
+.movieBox {
+    margin-left: auto;
+    margin-right: auto;
+}
