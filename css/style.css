@@ -30,8 +30,8 @@ main {
     height: fit-content;
 }
 
-#descripcion {
-    color: rgb(117, 117, 117);
+.descripcion {
+    color: rgb(170, 168, 168);
 }
 
 .titulo {
@@ -53,4 +53,7 @@ main {
 .movieBox {
     margin-left: auto;
     margin-right: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
 }
